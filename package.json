@@ -1,0 +1,24 @@
+{
+  "name": "responsive-university",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "ls > /dev/null 2>&1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atefeh-karimi/responsive-university.git"
+  },
+  "keywords": [
+    "html",
+    "sass"
+  ],
+  "author": "ati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atefeh-karimi/responsive-university/issues"
+  },
+  "homepage": "https://github.com/atefeh-karimi/responsive-university#readme"
+}
