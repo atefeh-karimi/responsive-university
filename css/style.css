@@ -363,7 +363,8 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   max-width: 480px;
-  background-color: #fff3f3;
+  padding: 1rem 8px;
+  background-color: rgba(111, 140, 235, 0.171);
   cursor: pointer;
   text-align: left;
   display: -webkit-box;
@@ -430,6 +431,42 @@ body {
     font-size: 22px;
     margin: 10px;
     color: white;
+  }
+  .courses h1 {
+    font-size: 24px;
+  }
+  .courses h3 {
+    font-size: 18px;
+  }
+  .courses .courses-wrapper .course {
+    margin-right: 0;
+  }
+  .campuses h1 {
+    font-size: 24px;
+  }
+  .campuses h3 {
+    font-size: 18px;
+  }
+  .campuses .campus {
+    margin-right: 0;
+  }
+  .facilities h1 {
+    font-size: 24px;
+  }
+  .facilities h3 {
+    font-size: 18px;
+  }
+  .facilities .facilities-wrapper .facility {
+    margin-right: 0;
+  }
+  .testimonials h1 {
+    font-size: 24px;
+  }
+  .testimonials h3 {
+    font-size: 18px;
+  }
+  .testimonials .testimonial-wrapper .testimonial {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

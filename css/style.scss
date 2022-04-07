@@ -233,8 +233,8 @@
     .testimonial {
       @include cardStyle();
       max-width: 480px;
-      // flex-basis: 44%;
-      background-color: #fff3f3;
+      padding: 1rem 8px;
+      background-color: rgba(111, 140, 235, 0.171);
       cursor: pointer;
       text-align: left;
       display: flex;
@@ -294,6 +294,59 @@
       font-size: 22px;
       margin: 10px;
       color: white;
+    }
+  }
+
+  .courses {
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    .courses-wrapper .course {
+      margin-right: 0;
+    }
+  }
+
+  .campuses {
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    .campus {
+      margin-right: 0;
+    }
+  }
+
+  .facilities {
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+
+    .facilities-wrapper {
+      .facility {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .testimonials {
+    h1 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .testimonial-wrapper .testimonial {
+      margin-right: 0;
     }
   }
 }
