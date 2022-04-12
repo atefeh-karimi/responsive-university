@@ -496,23 +496,8 @@ footer .copyRight small {
 }
 
 /* ===========================MEDIA QUERIES(TABLET and under)============================= */
-@media (max-width: 1024px) {
-  .header {
-    min-height: 90vh;
-  }
-  .header .header__text {
-    padding-top: 5rem;
-  }
-}
-
 /* ===================================MEDIA QUERIES(MOBILE)============================== */
 @media (max-width: 600px) {
-  .header {
-    min-height: 100vh;
-  }
-  .header .header__text {
-    padding-top: 0;
-  }
   .header__text h1 {
     font-size: 24px;
   }
