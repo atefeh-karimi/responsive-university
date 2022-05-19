@@ -229,10 +229,11 @@
   .testimonial-wrapper {
     @include cardWrapperStyle();
     justify-content: center;
+    position: relative;
 
     .testimonial {
       @include cardStyle();
-      max-width: 480px;
+      max-width: 550px;
       padding: 1rem 8px;
       background-color: rgba(111, 140, 235, 0.171);
       cursor: pointer;
@@ -260,6 +261,10 @@
 
       .testimonial-text {
         padding-right: 1rem;
+        .author-comment{
+          height: 120px;
+          font-size: 16px;
+        }
 
         i {
           color: rgb(255, 208, 0);
@@ -267,8 +272,24 @@
         }
       }
     }
+     .btn-container{
+       .fa{
+         font-size:32px;
+         color: rgb(19 64 211 / 74%);
+       }
+       .prev-btn{
+         position: absolute;
+         left: 0;
+         top:50%;
+       }
+       .next-btn{
+         position: absolute;
+         right: 0;
+         top:50%;
+       }
+            }
   }
-}
+  }
 
 /* ===========================CALL FOR ACTION============================= */
 .cta {
@@ -297,6 +318,7 @@
       @include btnStyleHover();
     }
   }
+ 
 }
 
 /* ===========================FOOTER============================= */
@@ -335,6 +357,9 @@ footer {
 }
 /* ===========================MEDIA QUERIES(TABLET and under)============================= */
 @media (max-width: 1024px) {
+  .cta .cta__container {
+    border-radius: unset;
+  }
 }
 
 /* ===================================MEDIA QUERIES(MOBILE)============================== */
@@ -408,6 +433,11 @@ footer {
     }
   }
 
+  .testimonials .testimonial-wrapper .testimonial .testimonial-text .author-comment {
+    height: 180px;
+    line-height: 1.5;
+  }
+
   .testimonials {
     h1 {
       font-size: 24px;
@@ -422,8 +452,15 @@ footer {
     }
   }
 
+  .testimonials .testimonial-wrapper .btn-container .next-btn{
+   position:static;
+}
+.testimonials .testimonial-wrapper .btn-container .prev-btn{
+   position:static;
+   margin-right: 62px;
+}
+
   .cta .cta__container {
-    border-radius: unset;
     padding: 60px 16px;
     h1 {
       font-size: 24px;

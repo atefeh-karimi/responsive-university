@@ -164,36 +164,24 @@
             <div class="testimonial-wrapper">
 
                 <div class="testimonial">
-                    <img src="./images/user2.jpg">
-                    <div class="testimonial-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laudantium in possimus, eos
+                    <img class="author-img" src="./images/user2.jpg">
+                    <div class="testimonial-text ">
+                        <p class="author-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                            laudantium in possimus, eos
                             asperiores consequuntur illum qui veniam dignissimos autem nulla doloribus soluta, quis
                             laboriosam dolor laborum aliquam inventore officia odit commodi?</p>
-                        <h3>David Byer</h3>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <h3 class="author-name">David Byer</h3>
+                        <div class="comment-star">
+                        </div>
                     </div>
                 </div>
-
-                <div class="testimonial">
-                    <img src="./images/user1.jpg">
-                    <div class="testimonial-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laudantium in possimus, eos
-                            asperiores
-                            consequuntur illum qui veniam dignissimos autem nulla doloribus soluta, quis laboriosam
-                            dolor
-                            laborum
-                            aliquam inventore officia odit commodi?</p>
-                        <h3>Rose Berkley</h3>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                <div class="btn-container">
+                    <span class="prev-btn ">
+                        <i class="fa fa-angle-left"></i>
+                    </span>
+                    <span class="next-btn ">
+                        <i class="fa fa-angle-right"></i>
+                    </span>
                 </div>
 
             </div>
@@ -251,6 +239,77 @@
         function hideMenu() {
             headerMenu.style.right = "-200px";
         }
+
+        const testimonials = [
+            {
+                id: 1,
+                name: "David Byer",
+                img: " http://127.0.0.1:5501/images/user2.jpg",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laudantium in possimus, eos asperiores consequuntur illum qui veniam dignissimos autem nulla doloribus soluta, quis laboriosam dolor laborum aliquam inventore officia odit commodi?",
+                star: 3
+            },
+            {
+                id: 2,
+                name: "Rose Berkley",
+                img: "http://127.0.0.1:5501/images/user1.jpg ",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laudantium in possimus!r sit amet consectetur adipisicing elit. Odio laudantium in possimus, eos asperiores consequuntur illum qui veniam ."
+                , star: 4
+            },
+            {
+                id: 2,
+                name: "John Smith",
+                img: " http://127.0.0.1:5501/images/user3.jpg",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laudantium in possimus, eos asperiores consequuntur illum qui veniam dignissimos autem nulla doloribus soluta."
+                , star: 2
+            },
+        ]
+
+        const authorImg = document.querySelector('.author-img');
+        const authorName = document.querySelector('.author-name');
+        const authorComment = document.querySelector('.author-comment');
+        let commentStar = document.querySelector('.comment-star');
+
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let curruntItem = 0;
+        window.addEventListener('DOMContentLoaded', function () {
+            showPerson();
+            showStar();
+        })
+
+        function showStar() {
+            var outputString = "";
+
+            for (var i = 0; i < testimonials[curruntItem].star; i++) {
+                outputString += "<i class=\"fas fa-star\"></i>"
+            }
+            commentStar.innerHTML = outputString;
+        }
+
+        function showPerson() {
+            authorImg.src = testimonials[curruntItem].img;
+            authorName.textContent = testimonials[curruntItem].name;
+            authorComment.textContent = testimonials[curruntItem].text;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            curruntItem++;
+            if (curruntItem > testimonials.length - 1) {
+                curruntItem = 0;
+            }
+            showPerson();
+            showStar();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            curruntItem--;
+            if (curruntItem < 0) {
+                curruntItem = testimonials.length - 1;
+            }
+            showPerson();
+            showStar();
+        });
 
     </script>
 
